@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = () => {
         <h1 className="text-xl font-bold text-white">Logo</h1>
       </div>
       <nav className="items-center justify-center hidden md:flex space-x-4">
-        <Links/>
+        <Links to={''} name={''}/>
         <ModeToggle/>
       </nav>
     </header>

@@ -12,7 +12,7 @@ const Links: React.FC<LinksProps> = () => {
     {HeaderLink.map((HeaderLink) => (
       <Link 
         key={HeaderLink.name} 
-        to={HeaderLink.to}   className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-[#333333] text-[#CCCCCC] border-b border-transparent hover:border-[#CEEDFF] hover:border-b" >
+        to={HeaderLink.to}   className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-[#E7F2F4] text-[#CCCCCC] border-b border-transparent hover:border-[#CEEDFF] hover:border-b" >
           {HeaderLink.name}
         </Link>
     ))}
