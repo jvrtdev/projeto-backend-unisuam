@@ -1,23 +1,21 @@
 import { Link } from 'react-router-dom';
+import { HeaderLink } from './@links';
 
-const Links = () => {
+interface LinksProps {
+  to: string;
+  name: string
+}
+
+const Links: React.FC<LinksProps> = () => {
   return (
     <>
-     <Link to='/' className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-black text-[#CCCCCC] border-b border-transparent hover:border-green-700 hover:border-b" >
-        Home
-     </Link>
-      <Link to="/vehicles" className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-black text-[#CCCCCC] border-b border-transparent hover:border-green-700 hover:border-b">
-        Veiculos
-      </Link>
-      <Link to="/cadastro" className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-black text-[#CCCCCC] border-b border-transparent hover:border-green-700 hover:border-b">
-       Cadastro
-      </Link>
-      <Link to="/login" className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-black text-[#CCCCCC] border-b border-transparent hover:border-green-700 hover:border-b">
-        Login
-      </Link>
-      <Link to="/contact" className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-black text-[#CCCCCC] border-b border-transparent hover:border-green-700 hover:border-b">
-        Contact
-      </Link>
+    {HeaderLink.map((HeaderLink) => (
+      <Link 
+        key={HeaderLink.name} 
+        to={HeaderLink.to}   className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-[#333333] text-[#CCCCCC] border-b border-transparent hover:border-[#CEEDFF] hover:border-b" >
+          {HeaderLink.name}
+        </Link>
+    ))}
     </>
   );
 };
