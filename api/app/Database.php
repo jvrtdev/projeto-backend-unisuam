@@ -12,7 +12,7 @@ class Database
     {
         $dsn = "mysql:host=127.0.0.1;dbname=projeto";
         
-        $pdo = new PDO($dsn, 'root', 'root1234', [
+        $pdo = new PDO($dsn, 'root', 'Root', [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]);
 

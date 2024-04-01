@@ -32,5 +32,24 @@ class UserController {
         return $response->withHeader('Content-Type', 'application/json');
     }
 
+    public function carros_id(Request $request, Response $response, $args)
+    {
+        $database = new Database;
+        $pdo = $database->getConnection();
+
+        $stmt = $pdo->query('SELECT * FROM carros WHERE id = '.$args["id"]);
+
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+        
+        
+        $body = json_encode($data);  
+        
+        $response->getBody()->write($body);
+        return $response->withHeader('Content-Type', 'application/json');
+    }
+
 
 }
