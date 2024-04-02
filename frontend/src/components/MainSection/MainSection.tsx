@@ -8,7 +8,7 @@ export default function MainSection() {
           <div>
             <h1 className="text-white text-5xl font-bold mb-6">Explore o Futuro da Mobilidade com a Vrum Vrum Drive</h1>
             <p className="text-white mb-6">Alugue Veículos Elétricos e Adote um Transporte Sustentável</p>
-            <Button className="bg-white text-[#bd1e59]">Encontre seu Veículo</Button>
+            <Button className="bg-white text-[#bd1e59]" variant={"outline"}>Encontre seu Veículo</Button>
           </div>
           <div className="text-white">
             <p className="mb-2">
