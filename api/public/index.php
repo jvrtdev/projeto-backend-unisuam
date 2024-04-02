@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 
-use App\Controllers\UserController;
+use App\Controllers\CarroController;
 use Slim\Factory\AppFactory;
 
 
@@ -16,10 +16,10 @@ $dotenv->load();
 
 $app = AppFactory::create();
 
-$app->get('/', UserController::class . ':hello');
+$app->get('/', CarroController::class . ':hello');
 
-$app->get('/api/carros', UserController::class . ':carros');
+$app->get('/api/carros', CarroController::class . ':carros');
 
-$app->get('/api/carros/{id}', UserController::class . ':carros_id');
+$app->get('/api/carros/{id}', CarroController::class . ':carros_id');
 
 $app->run();
