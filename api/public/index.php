@@ -20,4 +20,6 @@ $app->get('/', UserController::class . ':hello');
 
 $app->get('/api/carros', UserController::class . ':carros');
 
+$app->get('/api/carros/{id}', UserController::class . ':carros_id');
+
 $app->run();
