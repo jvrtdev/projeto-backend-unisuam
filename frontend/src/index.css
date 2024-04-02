@@ -18,28 +18,10 @@
      color: #333333;
   }
 
-  .isActive{
-    color: green;
-    transition-property: transform;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
-    transform-origin: center;
+  .light p {
+     color: #333333;
   }
-
-  .isActive:hover {
-    transform: scale(1.05);
-    color: #000; 
-  }
-  .noActive{
-    color: #CCCCCC;
-    transition-property: transform;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
-    transform-origin: center;
-  }
-
-  .noActive:hover {
-    transform: scale(1.05);
-    color: #000; 
+  .light h1 {
+     color: #333333;
   }
 }
