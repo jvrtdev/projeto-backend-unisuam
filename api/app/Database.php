@@ -10,9 +10,9 @@ class Database
 {
     public function getConnection(): PDO
     {
-        $dsn = "mysql:host=127.0.0.1;dbname=projeto";
+        $dsn = "mysql:host=".$_ENV['DB_HOST'].";dbname=". $_ENV['DB_NAME'];
         
-        $pdo = new PDO($dsn, 'root', 'root1234', [
+        $pdo = new PDO($dsn, $_ENV['DB_USER'], $_ENV['DB_PASS'], [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]);
 
