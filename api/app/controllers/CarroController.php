@@ -33,12 +33,10 @@ class CarroController {
     //falta alterar essa função usando repository
     {
         $database = new Database;
-        $pdo = $database->getConnection();
+        
+        $repository = new CarrosRepository($database);
 
-        $stmt = $pdo->query('SELECT * FROM carros WHERE id = '.$args["id"]);
-
-        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+        $data = $repository->listarCarrosId($args);
         
         $body = json_encode($data);  
         

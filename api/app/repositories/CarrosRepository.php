@@ -25,4 +25,12 @@ class CarrosRepository
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     //criar função com o nome listarCarrosPorId aqui
+    public function listarCarrosId($args): array
+    {
+        $pdo = $this->database->getConnection();
+
+        $stmt = $pdo->query('SELECT * FROM carros WHERE id = '.$args["id"]);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
