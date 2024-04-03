@@ -12,7 +12,7 @@ const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="flex  items-center justify-around px-4 py-2 h-[80px] bg-[#1E3B75] text-white">
       <div className="flex items-center space-x-4">
-        <h1 className="text-xl font-bold text-white">Logo</h1>
+      <img src="/LOGO.svg" alt="VrumVrumDrive" className='w-24' />
       </div>
       <nav
         className={`${
