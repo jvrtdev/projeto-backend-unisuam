@@ -11,7 +11,7 @@ const FastMarquee: React.FC = () => {
       </div>
 
       <div className="w-full p-3">
-        <Marquee direction="right"  delay={1} speed={80}  gradientWidth={5} pauseOnClick >
+        <Marquee direction="right"  delay={1} speed={150}  gradientWidth={5} pauseOnClick >
           <div className="flex flex-col items-center">
             <img 
               src="/honda.png" 
