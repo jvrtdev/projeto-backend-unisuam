@@ -1,4 +1,5 @@
 import FastMarquee from "@/components/FastMarquee/FastMarquee"
+import Footer from "@/components/Footer/Footer"
 import MainSection from "@/components/MainSection/MainSection"
 
 
@@ -9,7 +10,10 @@ const Home = () => {
         <MainSection/>  
     </div>
     <div className="flex items-center justify-center pt-5" >
-    <FastMarquee/>
+        <FastMarquee/>
+    </div>
+    <div className="flex items-center justify-center pt-5" >
+        <Footer />
     </div>
     </>
   )
