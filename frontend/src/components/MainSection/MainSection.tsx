@@ -6,7 +6,7 @@ export default function MainSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 className="text-white text-5xl font-bold mb-6">Explore o Futuro da Mobilidade com a Vrum Vrum Drive</h1>
+            <h1 className="text-white text-5xl font-bold mb-6 text-start">Explore o Futuro da Mobilidade com a Vrum Vrum Drive</h1>
             <p className="text-white mb-6">Alugue Veículos Elétricos e Adote um Transporte Sustentável</p>
             <Button className="bg-white text-[#bd1e59]" variant={"outline"}>Encontre seu Veículo</Button>
           </div>
@@ -16,18 +16,18 @@ export default function MainSection() {
               Optando por veículos elétricos, indivíduos podem contribuir para a redução das emissões de carbono e minimizar
               seu impacto ambiental.
             </p>
-            <div className="flex justify-around bg-slate-500">
+            <div className="flex justify-around bg-slate-500 p-2 rounded-xl">
               <div className="text-center">
-                <h2 className="text-3xl font-bold">100+</h2>
-                <p>Clientes Satisfeitos</p>
+                <h2 className="text-xl font-bold md:text-3xl">100+</h2>
+                <p className="font-light text-sm md:text-base">Clientes Satisfeitos</p>
               </div>
               <div className="text-center">
-                <h2 className="text-3xl font-bold">100+</h2>
-                <p>Carros Eletricos</p>
+                <h2 className="text-xl font-bold md:text-3xl">100+</h2>
+                <p className="font-light text-sm md:text-base">Carros Eletricos</p>
               </div>
               <div className="text-center">
-                <h2 className="text-3xl font-bold">100+</h2>
-                <p>Clientes Satisfeitos</p>
+                <h2 className="text-xl font-bold md:text-3xl">100+</h2>
+                <p className="font-light text-sm md:text-base">Clientes Felizes</p>
               </div>
             </div>
           </div>
