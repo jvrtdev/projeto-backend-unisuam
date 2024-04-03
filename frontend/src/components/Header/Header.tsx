@@ -10,9 +10,9 @@ const Header: React.FC<HeaderProps> = React.memo(() => {
   const [isOpen, toggleMenu] = useReducer((prev) => !prev, false);
 
   return (
-    <header className="relative flex items-center justify-between px-4 py-2 md:py-4 h-[80px] bg-[#1E3B75] text-white">
+    <header className="relative flex items-center justify-around px-4 py-2 md:py-4 h-[80px] bg-[#1E3B75] text-white">
       <div className="flex items-center space-x-4">
-        <h1 className="text-xl font-bold text-white">Logo</h1>
+        <img src="/LOGO.svg" alt="" className='w-20' />
       </div>
       {isOpen ? (
         <nav className="absolute top-full left-0 w-[30%] bg-[#1E3B75] md:relative md:flex md:items-center md:space-x-4 m-5 py-2 md:py-0 transition-all duration-300">
@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = React.memo(() => {
           </div>
         </nav>
       ) : (
-        <nav className="hidden md:flex md:items-center md:space-x-4 m-5">
+        <nav className="hidden md:flex md:items-center md:justify-around  md:space-x-4 m-5">
           <Links to={''} name={''} />
           <ModeToggle />
         </nav>
