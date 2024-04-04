@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = React.memo(() => {
         <img src="/LOGO.svg" alt="" className='w-20' />
       </div>
       {isOpen ? (
-        <nav className="absolute top-full left-0 w-[30%] bg-[#1E3B75] md:relative md:flex md:items-center md:space-x-4 m-5 py-2 md:py-0 transition-all duration-300">
+        <nav className="absolute top-full  right- w-[30%] bg-[#1E3B75] md:relative md:flex md:items-center md:space-x-4 m-5 py-2 md:py-0 transition-all duration-300">
           <div className="flex flex-col items-center space-y-2">
             <Links to={''} name={''} />
             <ModeToggle />

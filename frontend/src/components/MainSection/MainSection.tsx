@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import { Link } from "react-router-dom"
 
 export default function MainSection() {
   return (
@@ -6,9 +7,9 @@ export default function MainSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 className="text-white text-5xl font-bold mb-6 text-start">Explore o Futuro da Mobilidade com a Vrum Vrum Drive</h1>
+            <h1 className="text-white text-5xl font-bold mb-6 text-start">Explore o Futuro da Mobilidade com a Vrum Drive</h1>
             <p className="text-white mb-6">Alugue Veículos Elétricos e Adote um Transporte Sustentável</p>
-            <Button className="bg-white text-[#bd1e59]" variant={"outline"}>Encontre seu Veículo</Button>
+            <Link to={"/veiculos"}><Button className="bg-white text-[#bd1e59]" variant={"outline"}>Encontre seu Veículo</Button></Link>
           </div>
           <div className="text-white">
             <p className="mb-2">
