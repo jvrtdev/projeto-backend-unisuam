@@ -15,6 +15,14 @@ export const HeaderLink: Links[] = [
         name: "Veiculos"
     },
     {
+        to: "/contact",
+        name: "Contato"
+    },
+    {
+        to: "/about",
+        name: "Sobre nos"
+    },
+    {
         to: "/login",
         name: "Login"
     },
@@ -22,8 +30,5 @@ export const HeaderLink: Links[] = [
         to: "/cadastro",
         name: "Cadastro"
     },
-    {
-        to: "/contact",
-        name: "Contato"
-    }   
+       
 ]

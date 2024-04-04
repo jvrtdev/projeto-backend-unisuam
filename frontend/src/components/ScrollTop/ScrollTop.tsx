@@ -51,7 +51,7 @@ const ScrollTop: React.FC = () => {
     <>
       {state.isVisible && (
         <button
-          className="fixed bottom-4 right text-blue-950 px-4 py-2 rounded-lg"
+          className="fixed bottom-4 right text-black px-4 py-2 rounded-lg"
           onClick={scrollToTop}
         >
           <FaArrowUp size={60} />

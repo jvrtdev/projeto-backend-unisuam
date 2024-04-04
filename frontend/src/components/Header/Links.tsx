@@ -18,7 +18,7 @@ const Links: React.FC<LinksProps> = () => {
             color: isActive ? 'green' : '#CCCCCC',
             borderBottom: isActive ? '2px solid green' : 'none', 
           })}
-          className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-[#E7F2F4] text-[#CCCCCC] border-b border-transparent hover:border-[#CEEDFF] hover:border-b"
+          className="hover:scale-105 transition-transform duration-300 ease-in-out transform origin-center hover:text-[#E7F2F4] text-[black] border-b border-transparent hover:border-[#CEEDFF] hover:border-b"
         >
           {headerLink.name}
         </NavLink>
