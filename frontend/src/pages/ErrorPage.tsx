@@ -1,4 +1,4 @@
-import { isRouteErrorResponse, useRouteError } from "react-router-dom";
+import { Link, isRouteErrorResponse, useRouteError } from "react-router-dom";
 
 export default function ErrorPage() {
   const error = useRouteError()
@@ -18,5 +18,6 @@ export default function ErrorPage() {
 
   return <div className="flex justify-center items-center borde border-azul-celeste bg-black" >
       <h2 className="font-Mont text-9xl font-bold text-Amarelo " >Algo deu errado.</h2>
+      <Link to="/" >Voltar para o inicio</Link>
   </div>
 }
