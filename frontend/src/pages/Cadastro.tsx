@@ -1,8 +1,11 @@
+import CadastroForm from "@/components/Forms/CadastroForm"
 
 
 const Cadastro = () => {
   return (
-    <div>Cadastro</div>
+    <div className="flex items-center justify-center" >
+        <CadastroForm />  
+    </div>
   )
 }
 
