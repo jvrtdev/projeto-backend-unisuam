@@ -1,3 +1,4 @@
+import Customers from "@/components/Customers/Customers"
 import FastMarquee from "@/components/FastMarquee/FastMarquee"
 import Footer from "@/components/Footer/Footer"
 import MainSection from "@/components/MainSection/MainSection"
@@ -11,6 +12,9 @@ const Home = () => {
     </div>
     <div className="flex items-center justify-center pt-5" >
         <FastMarquee/>
+    </div>
+    <div className="flex items-center justify-center pt-5" >
+        <Customers />
     </div>
     <div className="flex items-center justify-center pt-5" >
         <Footer />
