@@ -25,10 +25,10 @@ export default function CadastroForm() {
         }}
       >
         <div className="flex flex-col justify-center h-full lg:p-12 text-white">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-3">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-3">
             Descubra um mundo de possibilidades com a Vrum Drive
-          </h1>
-          <p className="text-xl lg:text-2xl">Maximize sua viagem com facilidade e eficiência.</p>
+          </h2>
+          <div className="text-xl lg:text-2xl">Maximize sua viagem com facilidade e eficiência.</div>
         </div>
       </div>
       <div className="w-full lg:w-1/2 flex flex-col justify-center bg-gray-100">
@@ -75,7 +75,7 @@ export default function CadastroForm() {
               </div>
             </div>
             <div className="flex justify-between items-center">
-              <Button className="bg-[#bd1e59] text-white w-full lg:w-auto" variant={'secondary'}>Entrar</Button>
+              <Button className="bg-[#bd1e59] hover:bg-amber-800 text-white w-full lg:w-auto" variant={'secondary'}>Entrar</Button>
             </div>
             <div className="text-center">
               <NavLink to="/login" className="text-[#bd1e59] hover:to-blue-900"> Já possui uma conta? Clique aqui</NavLink>
