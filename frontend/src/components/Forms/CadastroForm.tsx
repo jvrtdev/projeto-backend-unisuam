@@ -1,19 +1,49 @@
 import { useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { NavLink } from 'react-router-dom';
+import { NavLink , useNavigate } from 'react-router-dom';
 import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri';
+import { schemaForm } from './shemaCadastro';
+import { z } from 'zod';
+import { useForm } from 'react-hook-form';
+import {zodResolver} from "@hookform/resolvers/zod"
+import {ToastContainer , toast} from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+import axios from "axios"
 
+type Inputs = z.infer<typeof schemaForm>
 
 export default function CadastroForm() {
+  const {
+    register, 
+    handleSubmit,
+    formState: {errors}
+  } = useForm<Inputs>({
+    resolver: zodResolver(schemaForm)
+  })
+  const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false); 
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleSubmited = async (data: any) => {
+    try{
+        const response = await axios.post("api", data);
+        console.log(response.data)
+        toast.success("Cadastro realizado")
+        navigate("/")
+    }
+    catch(error){
+        console.error(error)
+        toast.error("Credenciais invalidas")
+    }
+}
+
   return (
-      <form action='' method='' >
+      <form action='' method='POST' onSubmit={handleSubmit(handleSubmited)} >
       <div className="min-h-screen flex flex-col lg:flex-row">
       <div
         className="w-full lg:w-1/2 bg-cover bg-center"
@@ -38,12 +68,32 @@ export default function CadastroForm() {
             Pronto para otimizar sua viagem? Venha conhecer a Vrum Drive!
           </p>
           <div className="space-y-6 relative">
+          <div  >
+              <label className="block text-sm lg:text-base font-medium text-gray-700" htmlFor="email">
+                Nome
+              </label>
+              <div className="mt-1 relative rounded-md shadow-sm">
+                <Input className="block w-full pr-10 bg-[#00000095]" 
+                id="text" 
+                placeholder="digite seu nome" 
+                type="nome"  
+                {...register("name")}
+                 />
+                 {errors.name && <span className='text-black' >{errors.name.message} </span>}
+              </div>
+            </div>
             <div>
               <label className="block text-sm lg:text-base font-medium text-gray-700" htmlFor="email">
                 Email
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
-                <Input className="block w-full pr-10" id="email" placeholder="exemplo@gmail.com" type="email" />
+                <Input className="block w-full pr-10 bg-[#00000095]" 
+                id="email" 
+                placeholder="exemplo@gmail.com" 
+                type="email" 
+                {...register("email")}
+                />
+                {errors.email && <span className='text-black' >{errors.email.message}</span>}
               </div>
             </div>
             <div>
@@ -51,7 +101,13 @@ export default function CadastroForm() {
                 Senha
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
-                <Input className="block w-full pr-10" id="password" placeholder="********" type={showPassword ? "text" : "password"} />
+                <Input className="block w-full pr-10 bg-[#00000095]" 
+                id="password" 
+                placeholder="********" 
+                type={showPassword ? "text" : "password"} 
+                {...register("password")}
+                />
+                 {errors.password && <span className='text-black' >{errors.password.message}</span>}
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
@@ -84,6 +140,14 @@ export default function CadastroForm() {
         </div>
       </div>
     </div>
+    <ToastContainer  
+      position="top-center"
+      autoClose={3000}
+      hideProgressBar={false}
+      closeOnClick
+      pauseOnFocusLoss
+      pauseOnHover
+    />
       </form>
   )
 }
