@@ -3,7 +3,6 @@ namespace App\Controllers;
 
 use App\Database;
 use App\Repositories\CarrosRepository;
-use PDO;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
@@ -20,9 +19,8 @@ class CarroController {
         
         $repository = new CarrosRepository($database);
 
-        $data = $repository->listarCarros();
+        $data = $repository->listarVeiculos();
 
-        
         $body = json_encode($data);  
         
         $response->getBody()->write($body);
@@ -36,7 +34,7 @@ class CarroController {
         
         $repository = new CarrosRepository($database);
 
-        $data = $repository->listarCarrosId($args);
+        $data = $repository->listarVeiculosId($args);
         
         $body = json_encode($data);  
         

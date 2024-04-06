@@ -16,20 +16,20 @@ class CarrosRepository
         $this->database = $database;
     }
 
-    public function listarCarros(): array
+    public function listarVeiculos(): array
     {
         $pdo = $this->database->getConnection();
 
-        $stmt = $pdo->query('SELECT * FROM carros');
+        $stmt = $pdo->query('SELECT * FROM vehicles');
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
     //criar função com o nome listarCarrosPorId aqui
-    public function listarCarrosId($args): array
+    public function listarVeiculosId($args): array
     {
         $pdo = $this->database->getConnection();
 
-        $stmt = $pdo->query('SELECT * FROM carros WHERE id = '.$args["id"]);
+        $stmt = $pdo->query('SELECT * FROM vehicles WHERE vehicle_id = '.$args["id"]);
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
